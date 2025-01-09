@@ -3,7 +3,8 @@ import { router } from "./routes";
 import dotenv from "dotenv"
 import "colors"
 import { connectDB } from "./db";
-
+import path from "path"
+import fileUpload from "express-fileupload"
 
 dotenv.config()
 
@@ -13,8 +14,10 @@ const PORT: number = 8000;
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
+app.use(fileUpload())
 
 app.use("/api/v1", router)
+app.use("/docs", express.static(path.join(__dirname, "../uploads/docs"))); // Serve uploaded files
 
 connectDB().then(() => {
   app.listen(PORT, () => {

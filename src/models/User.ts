@@ -9,7 +9,6 @@ const userSchema = new Schema<IUser>(
     },
     dob: {
       type: Date,
-      min: Date.now(),
       required: true,
     },
     gender: {
@@ -31,6 +30,15 @@ const userSchema = new Schema<IUser>(
     },
     otp: { type: String },
     otpExpiresAt: { type: Date },
+    bloodGroup: { type: String },
+    height: { type: Number }, 
+    weight: { type: Number },
+    acuteConditions: [{ type: String }],
+    chronicConditions: [{ type: String }],
+    allergies: [{ type: String }],
+    pastSurgeries: [{ type: String }],
+    medications: [{ type: String }],
+    family: [{ type: Schema.Types.ObjectId, ref: "User" }],
   },
   { timestamps: true }
 );
