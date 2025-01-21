@@ -1,5 +1,6 @@
 import { Router, Request, Response } from "express";
 import User from "../../models/User";
+import Agency from "../../models/Agency";
 import { ensureUser } from "../../middleware/user";
 import { UserRequest } from "../../types/request";
 import { ensureAgency } from "../../middleware/agency";
@@ -40,111 +41,26 @@ profileRouter.get(
   }
 );
 
-profileRouter.put(
-  "/:userId/update",
-  ensureAgency,
+// New route to fetch agency details by MongoDB _id
+profileRouter.get(
+  "/agency/:agencyId",
+  ensureUser,
   async (req: Request, res: Response) => {
     try {
-      const updatedUser = await User.findByIdAndUpdate(
-        req.params.userId,
-        req.body,
-        { new: true }
-      );
-      if (!updatedUser) {
-        res.status(404).json({ message: "User not found" });
-        return;
-      }
-      res.json(updatedUser);
-    } catch (error) {
-      res.status(500).json({ message: "Server error", error });
-    }
-  }
-);
+      const { agencyId } = req.params;
+      const agency = await Agency.findById(agencyId); // Use findById to search by MongoDB _id
 
-profileRouter.get("/search", async (req: Request, res: Response) => {
-  const { name, mobile } = req.query;
-  try {
-    const query: any = {};
-    if (name) query.name = { $regex: name, $options: "i" };
-    if (mobile) query.mobile = mobile;
-
-    const users = await User.find(query);
-    res.json(users);
-  } catch (error) {
-    res.status(500).json({ message: "Server error", error });
-  }
-});
-
-profileRouter.put(
-  "/update",
-  ensureUser,
-  async (req: UserRequest, res: Response) => {
-    const userId = req.userId; // Assuming you have user authentication with userId in the request
-    try {
-      const updatedUser = await User.findByIdAndUpdate(userId, req.body, {
-        new: true,
-      });
-      if (!updatedUser) {
-        res.status(404).json({ message: "User not found" });
-        return;
-      }
-      res.json(updatedUser);
-    } catch (error) {
-      res.status(500).json({ message: "Server error", error });
-    }
-  }
-);
-
-profileRouter.put(
-  "/family/add/:memberId",
-  ensureUser,
-  async (req: UserRequest, res: Response) => {
-    try {
-      const familyMemberId = req.body.memberId;
-      const user = await User.findById(req.userId);
-      if (!user) {
-        res.status(404).json({ message: "User not found" });
+      if (!agency) {
+        res.status(404).json({ message: "Agency not found" });
         return;
       }
 
-      if (user.family) {
-        user.family.push(familyMemberId);
-      }
-      await user.save();
-
-      res.json({ message: "Family member added", family: user.family });
+      res.status(200).json(agency);
     } catch (error) {
-      res.status(500).json({ message: "Server error", error });
-    }
-  }
-);
-
-// Remove family member from the user by userId
-profileRouter.put(
-  "/family/remove/:memberId",
-  ensureUser,
-  async (req: UserRequest, res: Response) => {
-    try {
-      const { familyMemberId } = req.body.memberId;
-      const user = await User.findById(req.userId);
-      if (!user) {
-        res.status(404).json({ message: "User not found" });
-        return;
-      }
-
-      if (user.family) {
-        user.family = user.family.filter(
-          (memberId) => memberId.toString() !== familyMemberId
-        );
-      }
-
-      await user.save();
-
-      res.json({ message: "Family member removed", family: user.family });
-    } catch (error) {
-      res.status(500).json({ message: "Server error", error });
+      res.status(500).json({ message: "Error fetching agency details", error });
     }
   }
 );
 
 export { profileRouter };
+

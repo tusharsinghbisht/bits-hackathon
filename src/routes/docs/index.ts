@@ -12,7 +12,7 @@ const docsRouter = Router();
 docsRouter.post(
   "/upload",
   ensureAgency,
-  async (req: AgencyRequest, res: Response) => {
+  async (req: AgencyRequest, res: Response): Promise<void> => {
     try {
       const { userId, type } = req.body;
       const agencyId = req.agencyId;
@@ -27,11 +27,10 @@ docsRouter.post(
         return;
       }
 
-      const userExists = await User.findById(userId);
-      if (!userExists) {
-        res
-          .status(404)
-          .json({ message: "User with the given ID does not exist" });
+      // Find user by mobile number instead of _id
+      const user = await User.findOne({ mobile: userId });
+      if (!user) {
+        res.status(404).json({ message: "User not found" });
         return;
       }
 
@@ -48,7 +47,7 @@ docsRouter.post(
 
       const doc = new Doc({
         file: `/docs/${path.basename(filePath)}`,
-        userId,
+        userId: user._id, // Use the user's _id from database
         agencyId,
         type,
       });
@@ -80,7 +79,8 @@ docsRouter.get(
     }
   }
 );
-
+/*
+COMMENTED BECAUSE IT WAS INTERFERRING WITH GET_ALL REQUEST FOR USER
 docsRouter.get(
   "/user/:docId",
   ensureUser,
@@ -100,6 +100,7 @@ docsRouter.get(
     }
   }
 );
+*/
 
 docsRouter.get(
   "/agency/get_all",
@@ -152,3 +153,4 @@ docsRouter.delete(
 );
 
 export { docsRouter };
+{ }

@@ -6,7 +6,8 @@ import { connectDB } from "./db";
 import path from "path"
 import fileUpload from "express-fileupload"
 
-dotenv.config()
+// Load env vars from root directory
+dotenv.config({ path: path.join(__dirname, '../.env') })
 
 const app = express();
 
@@ -24,3 +25,4 @@ connectDB().then(() => {
     console.log(`Server is running PORT ${PORT}`.magenta);
   });
 })
+
