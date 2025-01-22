@@ -13,20 +13,13 @@ export default function Header() {
         <ul className="navbar-links">
           <li>
             <NavLink
-              to="/home"
+              to="/"
               className={({ isActive }) => (isActive ? "active" : "")}
             >
               Home
             </NavLink>
           </li>
-          <li>
-            <NavLink
-              to="/products"
-              className={({ isActive }) => (isActive ? "active" : "")}
-            >
-              Products
-            </NavLink>
-          </li>
+          
           <li>
             <NavLink
               to="/documentcenter"

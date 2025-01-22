@@ -19,6 +19,7 @@ h1 {
 
 /* Home Container */
 .home-container {
+  margin: auto;
   max-width: 400px;
   padding: 2rem;
   background: linear-gradient(145deg, #ffffff, #d9e2ec);
