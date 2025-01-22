@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import "./DocumentCenter.css";
 
 function DocumentCenter() {
@@ -32,6 +32,7 @@ function DocumentCenter() {
   const [filteredCards, setFilteredCards] = useState(cards);
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCard, setSelectedCard] = useState(null);
+  const fileUpload = useRef(null)
   const [itemSearchQuery, setItemSearchQuery] = useState("");
   const [searchType, setSearchType] = useState("Report"); // Default to searching for reports
 
@@ -95,7 +96,8 @@ function DocumentCenter() {
                     <button className="view-btn" onClick={() => handleView(card)}>
                       View
                     </button>
-                    <button className="upload-btn">Upload</button>
+                    <button className="upload-btn" onClick={() => fileUpload.current.click()}>Upload</button>
+                    <input type="file" ref={fileUpload} hidden />
                   </div>
                 </div>
               ))

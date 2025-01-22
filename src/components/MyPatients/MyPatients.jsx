@@ -4,6 +4,7 @@ import "./MyPatients.css";
 export default function MyPatients() {
   const [selectedPatient, setSelectedPatient] = useState(null);
   const [searchTerm, setSearchTerm] = useState("");
+  const [editing, setEditing] = useState(false);
 
   const patients = [
     {
@@ -46,6 +47,7 @@ export default function MyPatients() {
 
   const handleView = (patient) => {
     setSelectedPatient(patient);
+    setEditing(false)
   };
 
   const handleSearchChange = (e) => {
@@ -60,7 +62,9 @@ export default function MyPatients() {
 
   const handleEdit = (patient) => {
     // Add your edit logic here
-    console.log("Editing patient:", patient);
+    setSelectedPatient(patient)
+    setEditing(true)
+    // console.log("Editing patient:", patient);
   };
 
   const filteredPatients = searchTerm
@@ -113,7 +117,50 @@ export default function MyPatients() {
         )}
       </div>
 
-      {selectedPatient && (
+      {selectedPatient ? editing ? (
+        <div className="patient-details">
+        <h2>Edit Details for {selectedPatient.name}</h2>
+        <p>
+          <strong>DOB:</strong>{" "}
+          {`${selectedPatient.details.dob.day} ${selectedPatient.details.dob.month}, ${selectedPatient.details.dob.year}`}
+        </p>
+        <p>
+          <strong>Blood Group:</strong> {selectedPatient.details.bloodGroup}
+        </p>
+        <p>
+          <strong>Height:</strong> <input type="text" name="" value={`${selectedPatient.details.height} cm`} />
+        </p>
+        <p>
+          <strong>Weight:</strong> <input type="text" name="" value={`${selectedPatient.details.weight} kg`}/>
+        </p>
+        <p>
+          <strong>Acute Conditions:</strong>{" "}
+          <input type="text" name="" value={selectedPatient.details.acuteConditions.join(", ") || "None"} />
+        </p>
+        <p>
+          <strong>Chronic Conditions:</strong>{" "}
+          <input type="text" name="" value={selectedPatient.details.chronicConditions.join(", ") || "None"} />
+        </p>
+        <p>
+          <strong>Allergies:</strong>{" "}
+          <input type="text" name="" value={selectedPatient.details.allergies.join(", ") || "None"} />
+        </p>
+        <p>
+          <strong>Past Surgeries:</strong>{" "}
+          <input type="text" name="" value={selectedPatient.details.pastSurgeries.join(", ") || "None"} />
+        </p>
+        <p>
+          <strong>Medications:</strong>{" "}
+          <input type="text" name="" value={selectedPatient.details.medications.join(", ") || "None"} />
+        </p>
+        <button
+          onClick={() => handleView(patient)}
+          className="view-button"
+        >
+          Save
+        </button>
+      </div>
+      ) : (
         <div className="patient-details">
           <h2>Details for {selectedPatient.name}</h2>
           <p>
@@ -150,7 +197,7 @@ export default function MyPatients() {
             {selectedPatient.details.medications.join(", ") || "None"}
           </p>
         </div>
-      )}
+      ): <></>}
     </div>
   );
 }
