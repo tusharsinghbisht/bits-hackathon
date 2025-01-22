@@ -1,0 +1,36 @@
+<variant
+    name="release"
+    package="com.nityamgandhi.centralised_health"
+    minSdkVersion="21"
+    targetSdkVersion="34"
+    mergedManifest="/home/nityam-gandhi/FlutterApps/centralised_health/build/app/intermediates/merged_manifest/release/AndroidManifest.xml"
+    manifestMergeReport="/home/nityam-gandhi/FlutterApps/centralised_health/build/app/outputs/logs/manifest-merger-release-report.txt"
+    proguardFiles="/home/nityam-gandhi/FlutterApps/centralised_health/build/app/intermediates/default_proguard_files/global/proguard-android.txt-8.1.0:/home/nityam-gandhi/flutter_sdk/flutter/packages/flutter_tools/gradle/flutter_proguard_rules.pro:proguard-rules.pro:/home/nityam-gandhi/FlutterApps/centralised_health/build/app/intermediates/default_proguard_files/global/proguard-android-optimize.txt-8.1.0:proguard-rules.pro"
+    partialResultsDir="/home/nityam-gandhi/FlutterApps/centralised_health/build/app/intermediates/lint_vital_partial_results/release/out">
+  <buildFeatures
+      viewBinding="true"
+      namespacing="REQUIRED"/>
+  <sourceProviders>
+    <sourceProvider
+        manifests="src/main/AndroidManifest.xml"
+        javaDirectories="src/main/java:src/release/java:src/main/kotlin:src/release/kotlin"
+        resDirectories="src/main/res:src/release/res"
+        assetsDirectories="src/main/assets:src/release/assets"/>
+  </sourceProviders>
+  <testSourceProviders>
+  </testSourceProviders>
+  <testFixturesSourceProviders>
+  </testFixturesSourceProviders>
+  <manifestPlaceholders>
+    <placeholder
+        name="applicationName"
+        value="android.app.Application" />
+  </manifestPlaceholders>
+  <mainArtifact
+      classOutputs="/home/nityam-gandhi/FlutterApps/centralised_health/build/app/intermediates/javac/release/classes:/home/nityam-gandhi/FlutterApps/centralised_health/build/app/tmp/kotlin-classes/release:/home/nityam-gandhi/FlutterApps/centralised_health/build/app/kotlinToolingMetadata:/home/nityam-gandhi/FlutterApps/centralised_health/build/app/intermediates/compile_and_runtime_not_namespaced_r_class_jar/release/R.jar"
+      applicationId="com.nityamgandhi.centralised_health"
+      generatedSourceFolders="/home/nityam-gandhi/FlutterApps/centralised_health/build/app/generated/ap_generated_sources/release/out:/home/nityam-gandhi/FlutterApps/centralised_health/build/app/generated/data_binding_base_class_source_out/release/out"
+      generatedResourceFolders="/home/nityam-gandhi/FlutterApps/centralised_health/build/app/generated/res/google-services/release:/home/nityam-gandhi/FlutterApps/centralised_health/build/app/generated/res/resValues/release"
+      desugaredMethodsFiles="/home/nityam-gandhi/.gradle/caches/transforms-3/65c0c5e1a46dd2074f619deb01dcd57d/transformed/D8BackportedDesugaredMethods.txt">
+  </mainArtifact>
+</variant>

@@ -1,0 +1,14 @@
+R_DEF: Internal format may change without notice
+local
+drawable launch_background
+id textView
+layout activity
+layout activity_main
+mipmap ic_launcher
+string gcm_defaultSenderId
+string google_api_key
+string google_app_id
+string google_crash_reporting_api_key
+string project_id
+style LaunchTheme
+style NormalTheme

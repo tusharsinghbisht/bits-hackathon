@@ -1,0 +1,37 @@
+{
+  "project_info": {
+    "project_number": "123456789012",
+    "project_id": "your-project-id"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:123456789012:android:abcdef123456",
+        "android_client_info": {
+          "package_name": "com.nityamgandhi.centralised_health"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "583744925521-rl8t4ubcbqq09jbqmnkurpi5mdh87dor.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.nityamgandhi.centralised_health", 
+            "certificate_hash": "abcdef1234567890abcdef1234567890abcdef12"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDOKSfbngtNqTwvsixlJqCWNWsH5WetaGk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

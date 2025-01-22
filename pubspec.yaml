@@ -1,0 +1,39 @@
+name: centralised_health
+description: A new Flutter project.
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.17.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  google_maps_flutter: ^2.0.6
+  url_launcher: ^6.0.9
+  provider: ^6.0.0
+  http: ^0.13.3
+  cupertino_icons: ^1.0.8
+  curved_navigation_bar: ^1.0.1
+  geolocator: ^9.0.2
+  hive: ^2.0.5
+  hive_flutter: ^1.1.0
+  share_plus: ^7.2.1
+  shared_preferences: ^2.2.0  # Use the latest version
+  path_provider: ^2.1.2
+  permission_handler: ^11.0.1
+  device_info_plus: ^9.1.2
+  intl: ^0.18.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/icons/
+    - assets/images/

@@ -1,0 +1,19 @@
+<lint-module
+    format="1"
+    dir="/home/nityam-gandhi/FlutterApps/centralised_health/android/app"
+    name=":app"
+    type="APP"
+    maven="centralised_health:app:"
+    agpVersion="8.1.0"
+    buildFolder="/home/nityam-gandhi/FlutterApps/centralised_health/build/app"
+    bootClassPath="/home/nityam-gandhi/Android/Sdk/platforms/android-34/android.jar:/home/nityam-gandhi/Android/Sdk/build-tools/33.0.1/core-lambda-stubs.jar"
+    javaSourceLevel="1.8"
+    compileTarget="android-34"
+    neverShrinking="true">
+  <lintOptions
+      abortOnError="true"
+      absolutePaths="true"
+      checkReleaseBuilds="true"
+      explainIssues="true"/>
+  <variant name="release"/>
+</lint-module>

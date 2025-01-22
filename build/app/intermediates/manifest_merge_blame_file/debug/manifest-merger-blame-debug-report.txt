@@ -1,0 +1,294 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.nityamgandhi.centralised_health"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+9        android:targetSdkVersion="34" />
+10    <!--
+11         The INTERNET permission is required for development. Specifically,
+12         the Flutter tool needs it to communicate with the running application
+13         to allow setting breakpoints, to provide hot reload, etc.
+14    -->
+15    <uses-permission android:name="android.permission.INTERNET" />
+15-->/home/nityam-gandhi/FlutterApps/centralised_health/android/app/src/debug/AndroidManifest.xml:6:5-66
+15-->/home/nityam-gandhi/FlutterApps/centralised_health/android/app/src/debug/AndroidManifest.xml:6:22-64
+16    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+16-->/home/nityam-gandhi/FlutterApps/centralised_health/android/app/src/main/AndroidManifest.xml:3:5-78
+16-->/home/nityam-gandhi/FlutterApps/centralised_health/android/app/src/main/AndroidManifest.xml:3:22-76
+17    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+17-->/home/nityam-gandhi/FlutterApps/centralised_health/android/app/src/main/AndroidManifest.xml:4:5-80
+17-->/home/nityam-gandhi/FlutterApps/centralised_health/android/app/src/main/AndroidManifest.xml:4:22-78
+18    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+18-->/home/nityam-gandhi/FlutterApps/centralised_health/android/app/src/main/AndroidManifest.xml:5:5-80
+18-->/home/nityam-gandhi/FlutterApps/centralised_health/android/app/src/main/AndroidManifest.xml:5:22-78
+19    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+19-->/home/nityam-gandhi/FlutterApps/centralised_health/android/app/src/main/AndroidManifest.xml:6:5-79
+19-->/home/nityam-gandhi/FlutterApps/centralised_health/android/app/src/main/AndroidManifest.xml:6:22-77
+20    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" /> <!-- For Android 13+ -->
+20-->/home/nityam-gandhi/FlutterApps/centralised_health/android/app/src/main/AndroidManifest.xml:7:5-81
+20-->/home/nityam-gandhi/FlutterApps/centralised_health/android/app/src/main/AndroidManifest.xml:7:22-79
+21    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+21-->/home/nityam-gandhi/FlutterApps/centralised_health/android/app/src/main/AndroidManifest.xml:9:5-76
+21-->/home/nityam-gandhi/FlutterApps/centralised_health/android/app/src/main/AndroidManifest.xml:9:22-73
+22    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+22-->/home/nityam-gandhi/FlutterApps/centralised_health/android/app/src/main/AndroidManifest.xml:10:5-75
+22-->/home/nityam-gandhi/FlutterApps/centralised_health/android/app/src/main/AndroidManifest.xml:10:22-72
+23    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
+23-->/home/nityam-gandhi/FlutterApps/centralised_health/android/app/src/main/AndroidManifest.xml:11:5-75
+23-->/home/nityam-gandhi/FlutterApps/centralised_health/android/app/src/main/AndroidManifest.xml:11:22-72
+24    <!--
+25 Required to query activities that can process text, see:
+26         https://developer.android.com/training/package-visibility and
+27         https://developer.android.com/reference/android/content/Intent#ACTION_PROCESS_TEXT.
+28
+29         In particular, this is used by the Flutter engine in io.flutter.plugin.text.ProcessTextPlugin.
+30    -->
+31    <queries>
+31-->/home/nityam-gandhi/FlutterApps/centralised_health/android/app/src/main/AndroidManifest.xml:53:5-58:15
+32        <intent>
+32-->/home/nityam-gandhi/FlutterApps/centralised_health/android/app/src/main/AndroidManifest.xml:54:9-57:18
+33            <action android:name="android.intent.action.PROCESS_TEXT" />
+33-->/home/nityam-gandhi/FlutterApps/centralised_health/android/app/src/main/AndroidManifest.xml:55:13-72
+33-->/home/nityam-gandhi/FlutterApps/centralised_health/android/app/src/main/AndroidManifest.xml:55:21-70
+34
+35            <data android:mimeType="text/plain" />
+35-->/home/nityam-gandhi/FlutterApps/centralised_health/android/app/src/main/AndroidManifest.xml:56:13-50
+35-->/home/nityam-gandhi/FlutterApps/centralised_health/android/app/src/main/AndroidManifest.xml:56:19-48
+36        </intent>
+37        <!-- Needs to be explicitly declared on Android R+ -->
+38        <package android:name="com.google.android.apps.maps" />
+38-->[com.google.android.gms:play-services-maps:18.2.0] /home/nityam-gandhi/.gradle/caches/transforms-3/8bbca67cc5a32c5ad0e6edc351921bed/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:33:9-64
+38-->[com.google.android.gms:play-services-maps:18.2.0] /home/nityam-gandhi/.gradle/caches/transforms-3/8bbca67cc5a32c5ad0e6edc351921bed/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:33:18-61
+39    </queries> <!-- Include required permissions for Google Maps API to run. -->
+40    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+40-->[com.google.android.gms:play-services-maps:18.2.0] /home/nityam-gandhi/.gradle/caches/transforms-3/8bbca67cc5a32c5ad0e6edc351921bed/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:23:5-79
+40-->[com.google.android.gms:play-services-maps:18.2.0] /home/nityam-gandhi/.gradle/caches/transforms-3/8bbca67cc5a32c5ad0e6edc351921bed/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:23:22-76
+41
+42    <uses-feature
+42-->[com.google.android.gms:play-services-maps:18.2.0] /home/nityam-gandhi/.gradle/caches/transforms-3/8bbca67cc5a32c5ad0e6edc351921bed/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:26:5-28:35
+43        android:glEsVersion="0x00020000"
+43-->[com.google.android.gms:play-services-maps:18.2.0] /home/nityam-gandhi/.gradle/caches/transforms-3/8bbca67cc5a32c5ad0e6edc351921bed/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:27:9-41
+44        android:required="true" />
+44-->[com.google.android.gms:play-services-maps:18.2.0] /home/nityam-gandhi/.gradle/caches/transforms-3/8bbca67cc5a32c5ad0e6edc351921bed/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:28:9-32
+45
+46    <permission
+46-->[androidx.core:core:1.13.1] /home/nityam-gandhi/.gradle/caches/transforms-3/c666c258fca39b3353b46678a6b928ab/transformed/core-1.13.1/AndroidManifest.xml:22:5-24:47
+47        android:name="com.nityamgandhi.centralised_health.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+47-->[androidx.core:core:1.13.1] /home/nityam-gandhi/.gradle/caches/transforms-3/c666c258fca39b3353b46678a6b928ab/transformed/core-1.13.1/AndroidManifest.xml:23:9-81
+48        android:protectionLevel="signature" />
+48-->[androidx.core:core:1.13.1] /home/nityam-gandhi/.gradle/caches/transforms-3/c666c258fca39b3353b46678a6b928ab/transformed/core-1.13.1/AndroidManifest.xml:24:9-44
+49
+50    <uses-permission android:name="com.nityamgandhi.centralised_health.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+50-->[androidx.core:core:1.13.1] /home/nityam-gandhi/.gradle/caches/transforms-3/c666c258fca39b3353b46678a6b928ab/transformed/core-1.13.1/AndroidManifest.xml:26:5-97
+50-->[androidx.core:core:1.13.1] /home/nityam-gandhi/.gradle/caches/transforms-3/c666c258fca39b3353b46678a6b928ab/transformed/core-1.13.1/AndroidManifest.xml:26:22-94
+51
+52    <application
+53        android:name="android.app.Application"
+54        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+54-->[androidx.core:core:1.13.1] /home/nityam-gandhi/.gradle/caches/transforms-3/c666c258fca39b3353b46678a6b928ab/transformed/core-1.13.1/AndroidManifest.xml:28:18-86
+55        android:debuggable="true"
+56        android:extractNativeLibs="true"
+57        android:icon="@mipmap/ic_launcher"
+58        android:label="centralised_health" >
+59        <meta-data
+60            android:name="com.google.android.geo.API_KEY"
+61            android:value="AIzaSyDOKSfbngtNqTwvsixlJqCWNWsH5WetaGk" />
+62
+63        <activity
+64            android:name="com.nityamgandhi.centralised_health.MainActivity"
+65            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+66            android:exported="true"
+67            android:hardwareAccelerated="true"
+68            android:launchMode="singleTop"
+69            android:taskAffinity=""
+70            android:theme="@style/LaunchTheme"
+71            android:windowSoftInputMode="adjustResize" >
+72
+73            <!--
+74                 Specifies an Android theme to apply to this Activity as soon as
+75                 the Android process has started. This theme is visible to the user
+76                 while the Flutter UI initializes. After that, this theme continues
+77                 to determine the Window background behind the Flutter UI.
+78            -->
+79            <meta-data
+80                android:name="io.flutter.embedding.android.NormalTheme"
+81                android:resource="@style/NormalTheme" />
+82
+83            <intent-filter>
+84                <action android:name="android.intent.action.MAIN" />
+85
+86                <category android:name="android.intent.category.LAUNCHER" />
+87            </intent-filter>
+88        </activity>
+89        <!--
+90             Don't delete the meta-data below.
+91             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+92        -->
+93        <meta-data
+94            android:name="flutterEmbedding"
+95            android:value="2" />
+96
+97        <service
+97-->[:geolocator_android] /home/nityam-gandhi/FlutterApps/centralised_health/build/geolocator_android/intermediates/merged_manifest/debug/AndroidManifest.xml:8:9-12:56
+98            android:name="com.baseflow.geolocator.GeolocatorLocationService"
+98-->[:geolocator_android] /home/nityam-gandhi/FlutterApps/centralised_health/build/geolocator_android/intermediates/merged_manifest/debug/AndroidManifest.xml:9:13-77
+99            android:enabled="true"
+99-->[:geolocator_android] /home/nityam-gandhi/FlutterApps/centralised_health/build/geolocator_android/intermediates/merged_manifest/debug/AndroidManifest.xml:10:13-35
+100            android:exported="false"
+100-->[:geolocator_android] /home/nityam-gandhi/FlutterApps/centralised_health/build/geolocator_android/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-37
+101            android:foregroundServiceType="location" />
+101-->[:geolocator_android] /home/nityam-gandhi/FlutterApps/centralised_health/build/geolocator_android/intermediates/merged_manifest/debug/AndroidManifest.xml:12:13-53
+102        <!--
+103           Declares a provider which allows us to store files to share in
+104           '.../caches/share_plus' and grant the receiving action access
+105        -->
+106        <provider
+106-->[:share_plus] /home/nityam-gandhi/FlutterApps/centralised_health/build/share_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:13:9-21:20
+107            android:name="dev.fluttercommunity.plus.share.ShareFileProvider"
+107-->[:share_plus] /home/nityam-gandhi/FlutterApps/centralised_health/build/share_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:14:13-77
+108            android:authorities="com.nityamgandhi.centralised_health.flutter.share_provider"
+108-->[:share_plus] /home/nityam-gandhi/FlutterApps/centralised_health/build/share_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:15:13-74
+109            android:exported="false"
+109-->[:share_plus] /home/nityam-gandhi/FlutterApps/centralised_health/build/share_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:16:13-37
+110            android:grantUriPermissions="true" >
+110-->[:share_plus] /home/nityam-gandhi/FlutterApps/centralised_health/build/share_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:17:13-47
+111            <meta-data
+111-->[:share_plus] /home/nityam-gandhi/FlutterApps/centralised_health/build/share_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:18:13-20:68
+112                android:name="android.support.FILE_PROVIDER_PATHS"
+112-->[:share_plus] /home/nityam-gandhi/FlutterApps/centralised_health/build/share_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:19:17-67
+113                android:resource="@xml/flutter_share_file_paths" />
+113-->[:share_plus] /home/nityam-gandhi/FlutterApps/centralised_health/build/share_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:20:17-65
+114        </provider>
+115        <!--
+116           This manifest declared broadcast receiver allows us to use an explicit
+117           Intent when creating a PendingItent to be informed of the user's choice
+118        -->
+119        <receiver
+119-->[:share_plus] /home/nityam-gandhi/FlutterApps/centralised_health/build/share_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:26:9-32:20
+120            android:name="dev.fluttercommunity.plus.share.SharePlusPendingIntent"
+120-->[:share_plus] /home/nityam-gandhi/FlutterApps/centralised_health/build/share_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:27:13-82
+121            android:exported="false" >
+121-->[:share_plus] /home/nityam-gandhi/FlutterApps/centralised_health/build/share_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:28:13-37
+122            <intent-filter>
+122-->[:share_plus] /home/nityam-gandhi/FlutterApps/centralised_health/build/share_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:29:13-31:29
+123                <action android:name="EXTRA_CHOSEN_COMPONENT" />
+123-->[:share_plus] /home/nityam-gandhi/FlutterApps/centralised_health/build/share_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:30:17-65
+123-->[:share_plus] /home/nityam-gandhi/FlutterApps/centralised_health/build/share_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:30:25-62
+124            </intent-filter>
+125        </receiver>
+126
+127        <activity
+127-->[:url_launcher_android] /home/nityam-gandhi/FlutterApps/centralised_health/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:8:9-11:74
+128            android:name="io.flutter.plugins.urllauncher.WebViewActivity"
+128-->[:url_launcher_android] /home/nityam-gandhi/FlutterApps/centralised_health/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:9:13-74
+129            android:exported="false"
+129-->[:url_launcher_android] /home/nityam-gandhi/FlutterApps/centralised_health/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:10:13-37
+130            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+130-->[:url_launcher_android] /home/nityam-gandhi/FlutterApps/centralised_health/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-71
+131
+132        <provider
+132-->[androidx.emoji2:emoji2:1.2.0] /home/nityam-gandhi/.gradle/caches/transforms-3/d3559f99e4813a171b5493c8f32a3eaf/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+133            android:name="androidx.startup.InitializationProvider"
+133-->[androidx.emoji2:emoji2:1.2.0] /home/nityam-gandhi/.gradle/caches/transforms-3/d3559f99e4813a171b5493c8f32a3eaf/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:25:13-67
+134            android:authorities="com.nityamgandhi.centralised_health.androidx-startup"
+134-->[androidx.emoji2:emoji2:1.2.0] /home/nityam-gandhi/.gradle/caches/transforms-3/d3559f99e4813a171b5493c8f32a3eaf/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:26:13-68
+135            android:exported="false" >
+135-->[androidx.emoji2:emoji2:1.2.0] /home/nityam-gandhi/.gradle/caches/transforms-3/d3559f99e4813a171b5493c8f32a3eaf/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:27:13-37
+136            <meta-data
+136-->[androidx.emoji2:emoji2:1.2.0] /home/nityam-gandhi/.gradle/caches/transforms-3/d3559f99e4813a171b5493c8f32a3eaf/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+137                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+137-->[androidx.emoji2:emoji2:1.2.0] /home/nityam-gandhi/.gradle/caches/transforms-3/d3559f99e4813a171b5493c8f32a3eaf/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:30:17-75
+138                android:value="androidx.startup" />
+138-->[androidx.emoji2:emoji2:1.2.0] /home/nityam-gandhi/.gradle/caches/transforms-3/d3559f99e4813a171b5493c8f32a3eaf/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:31:17-49
+139            <meta-data
+139-->[androidx.lifecycle:lifecycle-process:2.7.0] /home/nityam-gandhi/.gradle/caches/transforms-3/5d9083683aa46ad6646ca7a884bd56df/transformed/jetified-lifecycle-process-2.7.0/AndroidManifest.xml:29:13-31:52
+140                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+140-->[androidx.lifecycle:lifecycle-process:2.7.0] /home/nityam-gandhi/.gradle/caches/transforms-3/5d9083683aa46ad6646ca7a884bd56df/transformed/jetified-lifecycle-process-2.7.0/AndroidManifest.xml:30:17-78
+141                android:value="androidx.startup" />
+141-->[androidx.lifecycle:lifecycle-process:2.7.0] /home/nityam-gandhi/.gradle/caches/transforms-3/5d9083683aa46ad6646ca7a884bd56df/transformed/jetified-lifecycle-process-2.7.0/AndroidManifest.xml:31:17-49
+142            <meta-data
+142-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/nityam-gandhi/.gradle/caches/transforms-3/1e1e8719823df11c58e964840aa823f6/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:29:13-31:52
+143                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+143-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/nityam-gandhi/.gradle/caches/transforms-3/1e1e8719823df11c58e964840aa823f6/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:30:17-85
+144                android:value="androidx.startup" />
+144-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/nityam-gandhi/.gradle/caches/transforms-3/1e1e8719823df11c58e964840aa823f6/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:31:17-49
+145        </provider> <!-- Needs to be explicitly declared on P+ -->
+146        <uses-library
+146-->[com.google.android.gms:play-services-maps:18.2.0] /home/nityam-gandhi/.gradle/caches/transforms-3/8bbca67cc5a32c5ad0e6edc351921bed/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:39:9-41:40
+147            android:name="org.apache.http.legacy"
+147-->[com.google.android.gms:play-services-maps:18.2.0] /home/nityam-gandhi/.gradle/caches/transforms-3/8bbca67cc5a32c5ad0e6edc351921bed/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:40:13-50
+148            android:required="false" />
+148-->[com.google.android.gms:play-services-maps:18.2.0] /home/nityam-gandhi/.gradle/caches/transforms-3/8bbca67cc5a32c5ad0e6edc351921bed/transformed/jetified-play-services-maps-18.2.0/AndroidManifest.xml:41:13-37
+149
+150        <activity
+150-->[com.google.android.gms:play-services-base:18.1.0] /home/nityam-gandhi/.gradle/caches/transforms-3/8470c89ba64407e2dd527ce11792b982/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:20:9-22:45
+151            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+151-->[com.google.android.gms:play-services-base:18.1.0] /home/nityam-gandhi/.gradle/caches/transforms-3/8470c89ba64407e2dd527ce11792b982/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:20:19-85
+152            android:exported="false"
+152-->[com.google.android.gms:play-services-base:18.1.0] /home/nityam-gandhi/.gradle/caches/transforms-3/8470c89ba64407e2dd527ce11792b982/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:22:19-43
+153            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+153-->[com.google.android.gms:play-services-base:18.1.0] /home/nityam-gandhi/.gradle/caches/transforms-3/8470c89ba64407e2dd527ce11792b982/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:21:19-78
+154
+155        <meta-data
+155-->[com.google.android.gms:play-services-basement:18.1.0] /home/nityam-gandhi/.gradle/caches/transforms-3/fdbb3cf6ca045f2cd53bc368c4b64c16/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:21:9-23:69
+156            android:name="com.google.android.gms.version"
+156-->[com.google.android.gms:play-services-basement:18.1.0] /home/nityam-gandhi/.gradle/caches/transforms-3/fdbb3cf6ca045f2cd53bc368c4b64c16/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:22:13-58
+157            android:value="@integer/google_play_services_version" />
+157-->[com.google.android.gms:play-services-basement:18.1.0] /home/nityam-gandhi/.gradle/caches/transforms-3/fdbb3cf6ca045f2cd53bc368c4b64c16/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:23:13-66
+158
+159        <uses-library
+159-->[androidx.window:window:1.2.0] /home/nityam-gandhi/.gradle/caches/transforms-3/3e108fe9d597d03770ae82acaebb5b63/transformed/jetified-window-1.2.0/AndroidManifest.xml:23:9-25:40
+160            android:name="androidx.window.extensions"
+160-->[androidx.window:window:1.2.0] /home/nityam-gandhi/.gradle/caches/transforms-3/3e108fe9d597d03770ae82acaebb5b63/transformed/jetified-window-1.2.0/AndroidManifest.xml:24:13-54
+161            android:required="false" />
+161-->[androidx.window:window:1.2.0] /home/nityam-gandhi/.gradle/caches/transforms-3/3e108fe9d597d03770ae82acaebb5b63/transformed/jetified-window-1.2.0/AndroidManifest.xml:25:13-37
+162        <uses-library
+162-->[androidx.window:window:1.2.0] /home/nityam-gandhi/.gradle/caches/transforms-3/3e108fe9d597d03770ae82acaebb5b63/transformed/jetified-window-1.2.0/AndroidManifest.xml:26:9-28:40
+163            android:name="androidx.window.sidecar"
+163-->[androidx.window:window:1.2.0] /home/nityam-gandhi/.gradle/caches/transforms-3/3e108fe9d597d03770ae82acaebb5b63/transformed/jetified-window-1.2.0/AndroidManifest.xml:27:13-51
+164            android:required="false" />
+164-->[androidx.window:window:1.2.0] /home/nityam-gandhi/.gradle/caches/transforms-3/3e108fe9d597d03770ae82acaebb5b63/transformed/jetified-window-1.2.0/AndroidManifest.xml:28:13-37
+165
+166        <receiver
+166-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/nityam-gandhi/.gradle/caches/transforms-3/1e1e8719823df11c58e964840aa823f6/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:34:9-52:20
+167            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+167-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/nityam-gandhi/.gradle/caches/transforms-3/1e1e8719823df11c58e964840aa823f6/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:35:13-76
+168            android:directBootAware="false"
+168-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/nityam-gandhi/.gradle/caches/transforms-3/1e1e8719823df11c58e964840aa823f6/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:36:13-44
+169            android:enabled="true"
+169-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/nityam-gandhi/.gradle/caches/transforms-3/1e1e8719823df11c58e964840aa823f6/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:37:13-35
+170            android:exported="true"
+170-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/nityam-gandhi/.gradle/caches/transforms-3/1e1e8719823df11c58e964840aa823f6/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:38:13-36
+171            android:permission="android.permission.DUMP" >
+171-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/nityam-gandhi/.gradle/caches/transforms-3/1e1e8719823df11c58e964840aa823f6/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:39:13-57
+172            <intent-filter>
+172-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/nityam-gandhi/.gradle/caches/transforms-3/1e1e8719823df11c58e964840aa823f6/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:40:13-42:29
+173                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+173-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/nityam-gandhi/.gradle/caches/transforms-3/1e1e8719823df11c58e964840aa823f6/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:41:17-91
+173-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/nityam-gandhi/.gradle/caches/transforms-3/1e1e8719823df11c58e964840aa823f6/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:41:25-88
+174            </intent-filter>
+175            <intent-filter>
+175-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/nityam-gandhi/.gradle/caches/transforms-3/1e1e8719823df11c58e964840aa823f6/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:43:13-45:29
+176                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+176-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/nityam-gandhi/.gradle/caches/transforms-3/1e1e8719823df11c58e964840aa823f6/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:44:17-85
+176-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/nityam-gandhi/.gradle/caches/transforms-3/1e1e8719823df11c58e964840aa823f6/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:44:25-82
+177            </intent-filter>
+178            <intent-filter>
+178-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/nityam-gandhi/.gradle/caches/transforms-3/1e1e8719823df11c58e964840aa823f6/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:46:13-48:29
+179                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+179-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/nityam-gandhi/.gradle/caches/transforms-3/1e1e8719823df11c58e964840aa823f6/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:47:17-88
+179-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/nityam-gandhi/.gradle/caches/transforms-3/1e1e8719823df11c58e964840aa823f6/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:47:25-85
+180            </intent-filter>
+181            <intent-filter>
+181-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/nityam-gandhi/.gradle/caches/transforms-3/1e1e8719823df11c58e964840aa823f6/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:49:13-51:29
+182                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+182-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/nityam-gandhi/.gradle/caches/transforms-3/1e1e8719823df11c58e964840aa823f6/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:50:17-95
+182-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/nityam-gandhi/.gradle/caches/transforms-3/1e1e8719823df11c58e964840aa823f6/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:50:25-92
+183            </intent-filter>
+184        </receiver>
+185    </application>
+186
+187</manifest>

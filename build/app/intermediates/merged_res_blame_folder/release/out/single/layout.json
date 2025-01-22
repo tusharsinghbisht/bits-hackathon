@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "com.nityamgandhi.centralised_health.app-mergeReleaseResources-36:/layout/activity_main.xml",
+        "source": "com.nityamgandhi.centralised_health.app-main-30:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.nityamgandhi.centralised_health.app-mergeReleaseResources-36:/layout/activity.xml",
+        "source": "com.nityamgandhi.centralised_health.app-main-30:/layout/activity.xml"
+    }
+]

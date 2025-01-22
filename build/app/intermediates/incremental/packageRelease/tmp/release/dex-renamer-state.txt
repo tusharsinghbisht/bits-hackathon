@@ -1,0 +1,4 @@
+#Fri Jan 03 13:43:05 IST 2025
+base.0=/home/nityam-gandhi/FlutterApps/centralised_health/build/app/intermediates/dex/release/mergeDexRelease/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
